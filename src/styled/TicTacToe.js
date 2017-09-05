@@ -1,12 +1,14 @@
 import React from 'react'
-import {Layer, Line} from 'react-konva'
+import {Layer, Line, Text} from 'react-konva'
+
+
 
 export const Board = ({unit, size, rows}) => {
 
   let grid = []
   let stroke = 'grey'
   let strokeWidth = 10
-  for (let i =1; i < rows; i++) {
+  for (let i = 1; i < rows; i++) {
     let position = unit * i
     grid.push(
       <Line
@@ -29,6 +31,25 @@ export const Board = ({unit, size, rows}) => {
   return (
     <Layer>
       {grid}
+    </Layer>
+  )
+}
+
+export const Squares = ({
+  unit,
+  coordinates,
+  gameState,
+  win,
+  gameOver,
+  yourTurn,
+  ownMark,
+  move
+}) => {
+  return (
+    <Layer>
+      <Text
+
+      />
     </Layer>
   )
 }
